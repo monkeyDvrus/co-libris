@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/css-documentaliste/style_addSeries.css">
+</head>
+
+<body>
+    <header>
+        <a href="admin_stats.html" id="lienLogo">
+            <img src="../../img/colibris.png">
+        </a>
+        <!-- logo -->
+        <div>
+            <a href="admin_stats.html" title="Statistiques">
+                <img class='svg' src="../../img/chart-bar.svg">
+            </a>
+            <a href="admin_gestionUser.html" title="Gestion des utilisateurs">
+                <img class='svg' src="../../img/users.svg">
+            </a>
+            <a href="#" title="Ajouter un utilisateur">
+                <img class='svg2' src="../../img/user-plus.svg">
+            </a>
+            <a href="admin_parametre.html" title="Paramètres">
+                <img class='svg2' src="../../img/cog.svg">
+            </a>
+            <a href="../../index.html" title="Déconnexion">
+                <img class='svg2' src="../../img/sign-out-alt.svg">
+            </a>
+        </div>
+    </header>
+    <div class="main">
+        <section class="Section1">
+            <div class="divTitre1">
+                <h1>Création d'une série</h1>
+            </div>
+        </section>
+        <section class="Section2 center">
+            <form id="formSerie">
+                <div class="divFormSerie">
+                    <input class="policeForm inputFormSerie inputTaille2" type="text" name="titreSerie" placeholder="Titre de la série">
+                </div>                
+                <div class="divFormSerie">
+                    <input class="policeForm inputFormSerie inputTaille" type="text" name="auteurSerie" placeholder="Auteur de la série">
+                    <input class="policeForm inputFormSerie inputTaille" type="text" name="langueSerie" placeholder="Langue de la série">
+                </div>
+                <div class="divFormSerie">
+                    <input class="policeForm inputFormSerie inputTaille" type="text" name="editionSerie" placeholder="Edition de la série">
+                    <input class="policeForm inputFormSerie inputTaille" type="text" name="collectionSerie" placeholder="Collection de la série">
+                </div>
+                <div class="divFormSerie">
+                    <input class="policeForm inputFormSerie inputTaille" type="text" name="codeBarreSerie" placeholder="Code barre">
+                    <input class="policeForm inputFormSerie inputTaille" type="text" name="codeBCDISerie" placeholder="Code BCDI">
+                </div>
+                <div class="divFormSerie">
+                    <input class="policeForm inputFormSerie inputTaille" type="text" name="codeISBN" placeholder="Code ISBN">
+                    <input class="policeForm inputFormSerie inputTaille" type="text" name="codeISNN" placeholder="Code ISNN">
+                </div>
+                <div class="divFormSerie">
+                    <div class="divFormSerie2">
+                        <label>Nombre d'exemplaire :</label>
+                        <input class="policeForm inputFormSerie inputTaille" type="text" name="nombreExemplaire" placeholder="exemple: 15">
+                    </div>
+                    <div class="divFormSerie3">
+                        <label>Nombre de page par livre :</label>
+                        <input class="policeForm inputFormSerie inputTaille" type="text" name="nombrePage" placeholder="exemple: 165">
+                    </div>
+                </div>
+                <div id="divFormSerieBoutton">
+                    <button class="policeForm bouttonEnregistrer" type="submit" name="enregistrer">Enregistrer</button>
+                </div>
+
+            </form>
+        </section>
+        <section>
+        </section>
+        <footer>
+            <!-- Bouton retour haut de page? -->
+        </footer>
+    </div>
+</body>
+
+</html>
