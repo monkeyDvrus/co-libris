@@ -1,6 +1,12 @@
-#divResultatSerie {
+header div {
+    display: flex;
+justify-content: space-between;
+width: 430px;
+}
+
+
+.divResultatSerie {
     width: 1120px;
-    padding: 0px 40px 0px 40px;
 }
 
 .articleSerie {
@@ -8,9 +14,25 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
-    padding: 30px 40px 30px 40px;
+    background-color: #F0F0F0;
+    padding: 15px 30px 15px 30px;
     margin-bottom: 20px;
+    -webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.15);
+    box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.15);
+}
+
+.Section2Docu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 30px 45px 15px 45px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.15);
+    box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.15);
 }
 
 .divTitreSerie {
@@ -19,14 +41,15 @@
     align-items: center;
 }
 
-.divAutheur {
+.divAuteur {
     width: 200px;
 }
 
 .imgSerie {
-    width: 80px;
+    width: 65px;
     height: auto;
-    margin-right: 25px;
+    margin-right: 50px;
+    border: 5px solid white;
 }
 
 .divDispo {
@@ -41,7 +64,7 @@
 }
 
 .divImgFleche {
-    width: 50px;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,4 +72,64 @@
 
 .angle-down2 {
     height: 2em;
+}
+
+.divDescriptionSerie {
+    width: 650px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.divDescriptDetail {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 48%;
+}
+
+.divTitreSerie {
+    margin-bottom: 2px;
+
+}
+
+.divDescriptDetail h3, h4, p {
+    padding: 3px 0px 3px 0px;
+}
+
+.divDescriptDetail p {
+    text-align: center;
+}
+
+.divDescriptDetail h3 {
+    font-weight: 600;
+}
+
+.divDescriptDetail p{
+    font-weight: 600;
+}
+
+
+.divAuteur {
+    margin-bottom: 2px;
+    width: 100%;
+}
+
+.divCollege {
+    margin-bottom: 4px;
+} 
+
+.divMonCollege {
+    margin-bottom: 4px;
+}
+.divCollege p{
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+    color: orange;
+    background-color: white;
+}
+
+.divMonCollege p {
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+    color: green;
+    background-color: white;
 }

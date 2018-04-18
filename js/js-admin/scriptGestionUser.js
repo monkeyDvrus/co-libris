@@ -11,22 +11,19 @@ function verifCreationDocumentaliste() {
         if (document.getElementById('tableauEnseignant')) {
             var boutonEnseignant = document.getElementById("enseignant");
             var baseArticle = document.getElementById("base")
-            baseArticle.removeChild(document.getElementById('tableauEnseignant'));
-            baseArticle.removeChild(document.getElementById('contenerResultat'));
+            baseArticle.removeChild(document.querySelector('.Section3'));
             boutonEnseignant.className = "zoneManagementUserBoutonChoix";
         }
         if (document.getElementById('tableauAdministrateur')) {
             var boutonAdministrateur = document.getElementById("administrateur");
             var baseArticle = document.getElementById("base")
-            baseArticle.removeChild(document.getElementById('tableauAdministrateur'));
-            baseArticle.removeChild(document.getElementById('contenerResultat'));
+            baseArticle.removeChild(document.querySelector('.Section3'));
             boutonAdministrateur.className = "zoneManagementUserBoutonChoix";
         }
         return createTableDocumentaliste();
     } else {
         var baseArticle = document.getElementById("base")
-        baseArticle.removeChild(document.getElementById('tableauDocumentaliste'));
-        baseArticle.removeChild(document.getElementById('contenerResultat'));
+        baseArticle.removeChild(document.querySelector('.Section3'));
         boutonDocumentaliste.className = "zoneManagementUserBoutonChoix";
     }
 }
@@ -35,16 +32,20 @@ function createTableDocumentaliste() {
     var boutonDocumentaliste = document.getElementById("documentaliste");
     boutonDocumentaliste.className = "zoneManagementUserBoutonChoix couleurBtn";
 
-    var article1 = document.getElementById("base");
+    var base = document.getElementById("base");
+
+    var section3 = document.createElement('section');
+    section3.className = "Section3";
+    base.appendChild(section3);
 
     var tableIntitule = document.createElement('div');
     tableIntitule.className = "intituleTableau";
     tableIntitule.id = "tableauDocumentaliste";
-    article1.appendChild(tableIntitule);
+    section3.appendChild(tableIntitule);
 
     var divContener = document.createElement('div');
     divContener.id = "contenerResultat";
-    article1.appendChild(divContener);
+    section3.appendChild(divContener);
 
     var pNom = document.createElement('p');
     pNom.className = "nomUser";
@@ -108,25 +109,25 @@ function newFicheDocumentaliste(id, nom, prenom, email, college, codeEtab, tel, 
     var pNom = document.createElement('p');
     var textNom = document.createTextNode(nom);
     pNom.appendChild(textNom);
-    pNom.className = "nomUser";
+    pNom.className = "nomUser2";
     divContenu.appendChild(pNom);
 
     var pPrenom = document.createElement('p');
     var textPrenom = document.createTextNode(prenom);
     pPrenom.appendChild(textPrenom);
-    pPrenom.className = "prenomUser";
+    pPrenom.className = "prenomUser2";
     divContenu.appendChild(pPrenom);
 
     var pEmail = document.createElement('p');
     var textEmail = document.createTextNode(email);
     pEmail.appendChild(textEmail);
-    pEmail.className = "emailUser";
+    pEmail.className = "emailUser2";
     divContenu.appendChild(pEmail);
 
     var pCollege = document.createElement('p');
     var textCollege = document.createTextNode(college);
     pCollege.appendChild(textCollege);
-    pCollege.className = "collegeUser";
+    pCollege.className = "collegeUser2";
     divContenu.appendChild(pCollege);
 
     var pLien = document.createElement('p');
@@ -180,7 +181,7 @@ function newFicheDocumentaliste(id, nom, prenom, email, college, codeEtab, tel, 
             divBtnModifSupp.appendChild(boutonModifier);
 
             var boutonSupprimer = document.createElement("a");
-            boutonSupprimer.className = "btn-updatedelete";
+            boutonSupprimer.className = "btn-updatedelete btn-delete";
             divBtnModifSupp.appendChild(boutonSupprimer);
             boutonSupprimer.href = "#";
             boutonSupprimer.addEventListener("click", deleteDocumentaliste);
@@ -248,7 +249,7 @@ function newFicheDocumentaliste(id, nom, prenom, email, college, codeEtab, tel, 
                     divBtnModifSupp.appendChild(boutonModifier);
 
                     var boutonSupprimer = document.createElement("a");
-                    boutonSupprimer.className = "btn-updatedelete";
+                    boutonSupprimer.className = "btn-updatedelete btn-delete";
                     divBtnModifSupp.appendChild(boutonSupprimer);
                     boutonSupprimer.href = "#";
                     boutonSupprimer.addEventListener("click", deleteDocumentaliste);
@@ -292,7 +293,7 @@ function newFicheDocumentaliste(id, nom, prenom, email, college, codeEtab, tel, 
                     divBtnModifSupp.appendChild(boutonModifier);
 
                     var boutonSupprimer = document.createElement("a");
-                    boutonSupprimer.className = "btn-updatedelete";
+                    boutonSupprimer.className = "btn-updatedelete btn-delete";
                     divBtnModifSupp.appendChild(boutonSupprimer);
                     boutonSupprimer.href = "#";
                     boutonSupprimer.addEventListener("click", deleteDocumentaliste);
@@ -325,14 +326,18 @@ function newFicheDocumentaliste(id, nom, prenom, email, college, codeEtab, tel, 
         formUpdate.className = "formUpdate";
         divPrincipaleForm.appendChild(formUpdate);
 
+        var divInfo = document.createElement('div');
+        divInfo.className = "divInfo"
+        formUpdate.appendChild(divInfo);
+
         var titre1Form = document.createElement("h3");
         var textTitre1Form = document.createTextNode("Information générale :");
         titre1Form.appendChild(textTitre1Form);
-        formUpdate.appendChild(titre1Form);
+        divInfo.appendChild(titre1Form);
 
         var divContenu1 = document.createElement("div");
         divContenu1.className = "divFormContenu";
-        formUpdate.appendChild(divContenu1);
+        divInfo.appendChild(divContenu1);
 
         var inputNom = document.createElement("input");
         inputNom.className = "policeForm taille1Form";
@@ -360,7 +365,7 @@ function newFicheDocumentaliste(id, nom, prenom, email, college, codeEtab, tel, 
 
         var divContenu2 = document.createElement("div");
         divContenu2.className = "divFormContenu";
-        formUpdate.appendChild(divContenu2);
+        divInfo.appendChild(divContenu2);
 
         var inputCodeEtab = document.createElement("input");
         inputCodeEtab.className = "policeForm taille1Form";
@@ -462,8 +467,10 @@ function newFicheDocumentaliste(id, nom, prenom, email, college, codeEtab, tel, 
         divPop.className = "pop-up";
         divBackgroundPop.appendChild(divPop);
 
+        var pDivPop = document.createElement("p");
+        divPop.appendChild(pDivPop);
         var textPop = document.createTextNode("Êtes-vous sûr de vouloir supprimer " + nom + (" ") + prenom + " de la liste des documentalistes?");
-        divPop.appendChild(textPop);
+        pDivPop.appendChild(textPop);
 
         var divBoutonPop = document.createElement("div");
         divBoutonPop.addEventListener("click", stopEvent);
@@ -523,22 +530,19 @@ function verifCreationEnseignant() {
         if (document.getElementById('tableauDocumentaliste')) {
             var boutonDocumentaliste = document.getElementById("documentaliste");
             var baseArticle = document.getElementById("base")
-            baseArticle.removeChild(document.getElementById('tableauDocumentaliste'));
-            baseArticle.removeChild(document.getElementById('contenerResultat'));
+            baseArticle.removeChild(document.querySelector('.Section3'));
             boutonDocumentaliste.className = "zoneManagementUserBoutonChoix";
         }
         if (document.getElementById('tableauAdministrateur')) {
             var boutonAdministrateur = document.getElementById("administrateur");
             var baseArticle = document.getElementById("base")
-            baseArticle.removeChild(document.getElementById('tableauAdministrateur'));
-            baseArticle.removeChild(document.getElementById('contenerResultat'));
+            baseArticle.removeChild(document.querySelector('.Section3'));
             boutonAdministrateur.className = "zoneManagementUserBoutonChoix";
         }
         return createTableEnseignant();
     } else {
         var baseArticle = document.getElementById("base")
-        baseArticle.removeChild(document.getElementById('tableauEnseignant'));
-        baseArticle.removeChild(document.getElementById('contenerResultat'));
+        baseArticle.removeChild(document.querySelector('.Section3'));
         boutonEnseignant.className = "zoneManagementUserBoutonChoix";
     }
 }
@@ -547,16 +551,20 @@ function createTableEnseignant() {
     var boutonEnseignant = document.getElementById("enseignant");
     boutonEnseignant.className = "zoneManagementUserBoutonChoix couleurBtn";
 
-    var article1 = document.getElementById("base");
+    var base = document.getElementById("base");
+
+    var section3 = document.createElement('section');
+    section3.className = "Section3";
+    base.appendChild(section3);
 
     var tableIntitule = document.createElement('div');
     tableIntitule.className = "intituleTableau";
     tableIntitule.id = "tableauEnseignant";
-    article1.appendChild(tableIntitule);
+    section3.appendChild(tableIntitule);
 
     var divContener = document.createElement('div');
     divContener.id = "contenerResultat";
-    article1.appendChild(divContener);
+    section3.appendChild(divContener);
 
     var pNom = document.createElement('p');
     pNom.className = "nomUser";
@@ -626,25 +634,25 @@ function newFicheEnseignant(id, nom, prenom, email, college, tel, identifiant) {
     var pNom = document.createElement('p');
     var textNom = document.createTextNode(nom);
     pNom.appendChild(textNom);
-    pNom.className = "nomUser";
+    pNom.className = "nomUser2";
     divContenu.appendChild(pNom);
 
     var pPrenom = document.createElement('p');
     var textPrenom = document.createTextNode(prenom);
     pPrenom.appendChild(textPrenom);
-    pPrenom.className = "prenomUser";
+    pPrenom.className = "prenomUser2";
     divContenu.appendChild(pPrenom);
 
     var pEmail = document.createElement('p');
     var textEmail = document.createTextNode(email);
     pEmail.appendChild(textEmail);
-    pEmail.className = "emailUser";
+    pEmail.className = "emailUser2";
     divContenu.appendChild(pEmail);
 
     var pCollege = document.createElement('p');
     var textCollege = document.createTextNode(college);
     pCollege.appendChild(textCollege);
-    pCollege.className = "collegeUser";
+    pCollege.className = "collegeUser2";
     divContenu.appendChild(pCollege);
 
     var pLien = document.createElement('p');
@@ -698,7 +706,7 @@ function newFicheEnseignant(id, nom, prenom, email, college, tel, identifiant) {
             divBtnModifSupp.appendChild(boutonModifier);
 
             var boutonSupprimer = document.createElement("a");
-            boutonSupprimer.className = "btn-updatedelete";
+            boutonSupprimer.className = "btn-updatedelete btn-delete";
             divBtnModifSupp.appendChild(boutonSupprimer);
             boutonSupprimer.href = "#";
             boutonSupprimer.addEventListener("click", deleteEnseignant);
@@ -766,7 +774,7 @@ function newFicheEnseignant(id, nom, prenom, email, college, tel, identifiant) {
                     divBtnModifSupp.appendChild(boutonModifier);
 
                     var boutonSupprimer = document.createElement("a");
-                    boutonSupprimer.className = "btn-updatedelete";
+                    boutonSupprimer.className = "btn-updatedelete btn-delete";
                     divBtnModifSupp.appendChild(boutonSupprimer);
                     boutonSupprimer.href = "#";
                     boutonSupprimer.addEventListener("click", deleteEnseignant);
@@ -810,7 +818,7 @@ function newFicheEnseignant(id, nom, prenom, email, college, tel, identifiant) {
                     divBtnModifSupp.appendChild(boutonModifier);
 
                     var boutonSupprimer = document.createElement("a");
-                    boutonSupprimer.className = "btn-updatedelete";
+                    boutonSupprimer.className = "btn-updatedelete btn-delete";
                     divBtnModifSupp.appendChild(boutonSupprimer);
                     boutonSupprimer.href = "#";
                     boutonSupprimer.addEventListener("click", deleteEnseignant);
@@ -838,8 +846,10 @@ function newFicheEnseignant(id, nom, prenom, email, college, tel, identifiant) {
         divPop.className = "pop-up";
         divBackgroundPop.appendChild(divPop);
 
+        var pDivPop = document.createElement("p");
+        divPop.appendChild(pDivPop);
         var textPop = document.createTextNode("Êtes-vous sûr de vouloir supprimer " + nom + (" ") + prenom + " de la liste des documentalistes?");
-        divPop.appendChild(textPop);
+        pDivPop.appendChild(textPop);
 
         var divBoutonPop = document.createElement("div");
         divBoutonPop.addEventListener("click", stopEvent);
@@ -901,14 +911,18 @@ function newFicheEnseignant(id, nom, prenom, email, college, tel, identifiant) {
         formUpdate.className = "formUpdate";
         divPrincipaleForm.appendChild(formUpdate);
 
+        var divInfo = document.createElement('div');
+        divInfo.className = "divInfo"
+        formUpdate.appendChild(divInfo);
+
         var titre1Form = document.createElement("h3");
         var textTitre1Form = document.createTextNode("Information générale :");
         titre1Form.appendChild(textTitre1Form);
-        formUpdate.appendChild(titre1Form);
+        divInfo.appendChild(titre1Form);
 
         var divContenu1 = document.createElement("div");
         divContenu1.className = "divFormContenu";
-        formUpdate.appendChild(divContenu1);
+        divInfo.appendChild(divContenu1);
 
         var inputNom = document.createElement("input");
         inputNom.className = "policeForm taille1Form";
@@ -936,7 +950,7 @@ function newFicheEnseignant(id, nom, prenom, email, college, tel, identifiant) {
 
         var divContenu2 = document.createElement("div");
         divContenu2.className = "divFormContenu";
-        formUpdate.appendChild(divContenu2);
+        divInfo.appendChild(divContenu2);
 
         var selectMatiere = document.createElement("select");
         selectMatiere.className = "policeForm taille4form";
@@ -1054,22 +1068,19 @@ function verifCreationAdministrateur() {
         if (document.getElementById('tableauDocumentaliste')) {
             var boutonDocumentaliste = document.getElementById("documentaliste");
             var baseArticle = document.getElementById("base")
-            baseArticle.removeChild(document.getElementById('tableauDocumentaliste'));
-            baseArticle.removeChild(document.getElementById('contenerResultat'));
+            baseArticle.removeChild(document.querySelector('.Section3'));
             boutonDocumentaliste.className = "zoneManagementUserBoutonChoix";
         }
         if (document.getElementById('tableauEnseignant')) {
             var boutonEnseignant = document.getElementById("enseignant");
             var baseArticle = document.getElementById("base")
-            baseArticle.removeChild(document.getElementById('tableauEnseignant'));
-            baseArticle.removeChild(document.getElementById('contenerResultat'));
+            baseArticle.removeChild(document.querySelector('.Section3'));
             boutonEnseignant.className = "zoneManagementUserBoutonChoix";
         }
         return createTableAdministrateur();
     } else {
         var baseArticle = document.getElementById("base")
-        baseArticle.removeChild(document.getElementById('tableauAdministrateur'));
-        baseArticle.removeChild(document.getElementById('contenerResultat'));
+        baseArticle.removeChild(document.querySelector('.Section3'));
         boutonAdministrateur.className = "zoneManagementUserBoutonChoix";
     }
 }
@@ -1079,16 +1090,20 @@ function createTableAdministrateur() {
     var boutonAdministrateur = document.getElementById("administrateur");
     boutonAdministrateur.className = "zoneManagementUserBoutonChoix couleurBtn";
 
-    var article1 = document.getElementById("base");
+    var base = document.getElementById("base");
+
+    var section3 = document.createElement('section');
+    section3.className = "Section3";
+    base.appendChild(section3);
 
     var tableIntitule = document.createElement('div');
     tableIntitule.className = "intituleTableau";
     tableIntitule.id = "tableauAdministrateur";
-    article1.appendChild(tableIntitule);
+    section3.appendChild(tableIntitule);
 
     var divContener = document.createElement('div');
     divContener.id = "contenerResultat";
-    article1.appendChild(divContener);
+    section3.appendChild(divContener);
 
     var pNom = document.createElement('p');
     pNom.className = "nomUser";
@@ -1146,25 +1161,25 @@ function newFicheAdministrateur(id, nom, prenom, email, tel, identifiant) {
     var pNom = document.createElement('p');
     var textNom = document.createTextNode(nom);
     pNom.appendChild(textNom);
-    pNom.className = "nomUser";
+    pNom.className = "nomUser2";
     divContenu.appendChild(pNom);
 
     var pPrenom = document.createElement('p');
     var textPrenom = document.createTextNode(prenom);
     pPrenom.appendChild(textPrenom);
-    pPrenom.className = "prenomUser";
+    pPrenom.className = "prenomUser2";
     divContenu.appendChild(pPrenom);
 
     var pEmail = document.createElement('p');
     var textEmail = document.createTextNode(email);
     pEmail.appendChild(textEmail);
-    pEmail.className = "emailUser";
+    pEmail.className = "emailUser2";
     divContenu.appendChild(pEmail);
 
     var pTel = document.createElement('p');
     var textTel = document.createTextNode(tel);
     pTel.appendChild(textTel);
-    pTel.className = "collegeUser";
+    pTel.className = "collegeUser2";
     divContenu.appendChild(pTel);
 
     var pLien = document.createElement('p');
@@ -1218,7 +1233,7 @@ function newFicheAdministrateur(id, nom, prenom, email, tel, identifiant) {
             divBtnModifSupp.appendChild(boutonModifier);
 
             var boutonSupprimer = document.createElement("a");
-            boutonSupprimer.className = "btn-updatedelete";
+            boutonSupprimer.className = "btn-updatedelete btn-delete";
             divBtnModifSupp.appendChild(boutonSupprimer);
             boutonSupprimer.href = "#";
             boutonSupprimer.addEventListener("click", deleteAdministrateur);
@@ -1286,7 +1301,7 @@ function newFicheAdministrateur(id, nom, prenom, email, tel, identifiant) {
                     divBtnModifSupp.appendChild(boutonModifier);
 
                     var boutonSupprimer = document.createElement("a");
-                    boutonSupprimer.className = "btn-updatedelete";
+                    boutonSupprimer.className = "btn-updatedelete btn-delete";
                     divBtnModifSupp.appendChild(boutonSupprimer);
                     boutonSupprimer.href = "#";
                     boutonSupprimer.addEventListener("click", deleteAdministrateur);
@@ -1330,7 +1345,7 @@ function newFicheAdministrateur(id, nom, prenom, email, tel, identifiant) {
                     divBtnModifSupp.appendChild(boutonModifier);
 
                     var boutonSupprimer = document.createElement("a");
-                    boutonSupprimer.className = "btn-updatedelete";
+                    boutonSupprimer.className = "btn-updatedelete btn-delete";
                     divBtnModifSupp.appendChild(boutonSupprimer);
                     boutonSupprimer.href = "#";
                     boutonSupprimer.addEventListener("click", deleteAdministrateur);
@@ -1357,9 +1372,11 @@ function newFicheAdministrateur(id, nom, prenom, email, tel, identifiant) {
         divPop.addEventListener("click", stopEvent);
         divPop.className = "pop-up";
         divBackgroundPop.appendChild(divPop);
-
+        
+        var pDivPop = document.createElement("p");
+        divPop.appendChild(pDivPop);
         var textPop = document.createTextNode("Êtes-vous sûr de vouloir supprimer " + nom + (" ") + prenom + " de la liste des documentalistes?");
-        divPop.appendChild(textPop);
+        pDivPop.appendChild(textPop);
 
         var divBoutonPop = document.createElement("div");
         divBoutonPop.addEventListener("click", stopEvent);
@@ -1421,17 +1438,21 @@ function newFicheAdministrateur(id, nom, prenom, email, tel, identifiant) {
         formUpdate.className = "formUpdate";
         divPrincipaleForm.appendChild(formUpdate);
 
+        var divInfo = document.createElement('div');
+        divInfo.className = "divInfo"
+        formUpdate.appendChild(divInfo);
+
         var titre1Form = document.createElement("h3");
         var textTitre1Form = document.createTextNode("Information générale :");
         titre1Form.appendChild(textTitre1Form);
-        formUpdate.appendChild(titre1Form);
+        divInfo.appendChild(titre1Form);
 
         var divContenu1 = document.createElement("div");
-        divContenu1.className = "divFormContenu2";
-        formUpdate.appendChild(divContenu1);
+        divContenu1.className = "divFormContenu";
+        divInfo.appendChild(divContenu1);
 
         var inputNom = document.createElement("input");
-        inputNom.className = "policeForm taille1Form inputMaring";
+        inputNom.className = "policeForm taille1Form";
         inputNom.type = "text";
         inputNom.name = "nomUser";
         inputNom.placeholder = "Nom utilistateur";
@@ -1446,25 +1467,25 @@ function newFicheAdministrateur(id, nom, prenom, email, tel, identifiant) {
         inputPrenom.value = prenom;
         divContenu1.appendChild(inputPrenom);
 
-        var divContenu2 = document.createElement("div");
-        divContenu2.className = "divFormContenu2";
-        formUpdate.appendChild(divContenu2);
-
-        var inputTel = document.createElement("input");
-        inputTel.className = "policeForm taille1Form inputMaring";
-        inputTel.type = "tel";
-        inputTel.name = "telUser";
-        inputTel.placeholder = "Telephone de contact";
-        inputTel.value = tel;
-        divContenu2.appendChild(inputTel);
-
         var inputEmail = document.createElement("input");
         inputEmail.className = "policeForm taille2Form";
         inputEmail.type = "email";
         inputEmail.name = "emailUser";
         inputEmail.placeholder = "Email de contact";
         inputEmail.value = email;
-        divContenu2.appendChild(inputEmail);
+        divContenu1.appendChild(inputEmail);
+
+        var divContenu2 = document.createElement("div");
+        divContenu2.className = "divFormContenu2";
+        divInfo.appendChild(divContenu2);
+
+        var inputTel = document.createElement("input");
+        inputTel.className = "policeForm taille1Form";
+        inputTel.type = "tel";
+        inputTel.name = "telUser";
+        inputTel.placeholder = "Telephone de contact";
+        inputTel.value = tel;
+        divContenu2.appendChild(inputTel);
 
         var titre2Form = document.createElement("h3");
         var textTitre2Form = document.createTextNode("Information de connexion :");

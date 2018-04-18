@@ -11,19 +11,19 @@ function verifCreationDocumentaliste() {
         if (document.getElementById("divFormAdministrateur")) {
             var boutonAdministrateur = document.getElementById("administrateur");
             var baseArticle = document.getElementById("base")
-            baseArticle.removeChild(document.getElementById('divFormAdministrateur'));
+            baseArticle.removeChild(document.querySelector('.Section3'));
             boutonAdministrateur.className = "zoneManagementUserBoutonChoix";
         }
         if (document.getElementById("divFormEnseignant")) {
             var boutonEnseignant = document.getElementById("enseignant");
             var baseArticle = document.getElementById("base")
-            baseArticle.removeChild(document.getElementById('divFormEnseignant'));
+            baseArticle.removeChild(document.querySelector('.Section3'));
             boutonEnseignant.className = "zoneManagementUserBoutonChoix";
         }
         return createDocumentaliste();
     } else {
         var baseArticle = document.getElementById("base")
-        baseArticle.removeChild(document.getElementById('divFormDocumentaliste'));
+        baseArticle.removeChild(document.querySelector('.Section3'));
         boutonDocumentaliste.className = "zoneManagementUserBoutonChoix";
     }
 }
@@ -32,25 +32,33 @@ function createDocumentaliste() {
     var boutonDocumentaliste = document.getElementById("documentaliste");
     boutonDocumentaliste.className = "zoneManagementUserBoutonChoix couleurBtn";
 
-    var article1 = document.getElementById("base");
+    var base = document.getElementById("base");
+
+    var section3 = document.createElement('section');
+    section3.className = "Section3";
+    base.appendChild(section3);
 
     var divForm = document.createElement('div');
     divForm.id = "divFormDocumentaliste";
     divForm.className = "divFormCreate";
-    article1.appendChild(divForm);
+    section3.appendChild(divForm);
 
     var formNewUser = document.createElement('form');
     formNewUser.className = "formCreate";
     divForm.appendChild(formNewUser);
 
+    var divInfo = document.createElement('div');
+    divInfo.className = "divInfo"
+    formNewUser.appendChild(divInfo);
+
     var titre1 = document.createElement('h3');
     var textTitre1 = document.createTextNode("Information générale :")
     titre1.appendChild(textTitre1);
-    formNewUser.appendChild(titre1);
+    divInfo.appendChild(titre1);
 
     var divInput1 = document.createElement('div');
     divInput1.className = "divFormContenu";
-    formNewUser.appendChild(divInput1);
+    divInfo.appendChild(divInput1);
 
     var inputNom = document.createElement("input");
     inputNom.className = "policeForm taille1Form";
@@ -75,7 +83,7 @@ function createDocumentaliste() {
 
     var divInput2 = document.createElement('div');
     divInput2.className = "divFormContenu";
-    formNewUser.appendChild(divInput2);
+    divInfo.appendChild(divInput2);
 
     var inputCodeEtab = document.createElement("input");
     inputCodeEtab.className = "policeForm taille1Form";
@@ -117,7 +125,7 @@ function createDocumentaliste() {
     option5.appendChild(textOption5);
 
     var titre2 = document.createElement('h3');
-    var textTitre2 = document.createTextNode("Information de connexion :")
+    var textTitre2 = document.createTextNode("Connexion à l'application :")
     titre2.appendChild(textTitre2);
     formNewUser.appendChild(titre2);
 
@@ -172,19 +180,19 @@ function verifCreationEnseignant() {
         if (document.getElementById("divFormDocumentaliste")) {
             var boutonDocumentaliste = document.getElementById("documentaliste");
             var baseArticle = document.getElementById("base")
-            baseArticle.removeChild(document.getElementById('divFormDocumentaliste'));
+            baseArticle.removeChild(document.querySelector('.Section3'));
             boutonDocumentaliste.className = "zoneManagementUserBoutonChoix";
         }
         if (document.getElementById("divFormAdministrateur")) {
             var boutonAdministrateur = document.getElementById("administrateur");
             var baseArticle = document.getElementById("base")
-            baseArticle.removeChild(document.getElementById('divFormAdministrateur'));
+            baseArticle.removeChild(document.querySelector('.Section3'));
             boutonAdministrateur.className = "zoneManagementUserBoutonChoix";
         }
         return createEnseignant();
     } else {
         var baseArticle = document.getElementById("base")
-        baseArticle.removeChild(document.getElementById('divFormEnseignant'));
+        baseArticle.removeChild(document.querySelector('.Section3'));
         boutonEnseignant.className = "zoneManagementUserBoutonChoix";
     }
 }
@@ -193,25 +201,33 @@ function createEnseignant() {
     var boutonEnseignant = document.getElementById("enseignant");
     boutonEnseignant.className = "zoneManagementUserBoutonChoix couleurBtn";
 
-    var article1 = document.getElementById("base");
+    var base = document.getElementById("base");
+
+    var section3 = document.createElement('section');
+    section3.className = "Section3";
+    base.appendChild(section3);
 
     var divForm = document.createElement('div');
     divForm.id = "divFormEnseignant";
     divForm.className = "divFormCreate";
-    article1.appendChild(divForm);
+    section3.appendChild(divForm);
 
     var formNewUser = document.createElement('form');
     formNewUser.className = "formCreate";
     divForm.appendChild(formNewUser);
 
+    var divInfo = document.createElement('div');
+    divInfo.className = "divInfo"
+    formNewUser.appendChild(divInfo);
+
     var titre1 = document.createElement('h3');
     var textTitre1 = document.createTextNode("Information générale :")
     titre1.appendChild(textTitre1);
-    formNewUser.appendChild(titre1);
+    divInfo.appendChild(titre1);
 
     var divInput1 = document.createElement('div');
     divInput1.className = "divFormContenu";
-    formNewUser.appendChild(divInput1);
+    divInfo.appendChild(divInput1);
 
     var inputNom = document.createElement("input");
     inputNom.className = "policeForm taille1Form";
@@ -236,7 +252,7 @@ function createEnseignant() {
 
     var divInput2 = document.createElement('div');
     divInput2.className = "divFormContenu";
-    formNewUser.appendChild(divInput2);
+    divInfo.appendChild(divInput2);
 
     var selectMatiere = document.createElement("select");
     selectMatiere.className = "policeForm taille4form";
@@ -296,7 +312,7 @@ function createEnseignant() {
     option5.appendChild(textOption5);
 
     var titre2 = document.createElement('h3');
-    var textTitre2 = document.createTextNode("Information de connexion :")
+    var textTitre2 = document.createTextNode("Connexion à l'application :")
     titre2.appendChild(textTitre2);
     formNewUser.appendChild(titre2);
 
@@ -351,19 +367,19 @@ function verifCreationAdministrateur() {
         if (document.getElementById("divFormDocumentaliste")) {
             var boutonDocumentaliste = document.getElementById("documentaliste");
             var baseArticle = document.getElementById("base")
-            baseArticle.removeChild(document.getElementById('divFormDocumentaliste'));
+            baseArticle.removeChild(document.querySelector('.Section3'));
             boutonDocumentaliste.className = "zoneManagementUserBoutonChoix";
         }
         if (document.getElementById("divFormEnseignant")) {
             var boutonEnseignant = document.getElementById("enseignant");
             var baseArticle = document.getElementById("base")
-            baseArticle.removeChild(document.getElementById('divFormEnseignant'));
+            baseArticle.removeChild(document.querySelector('.Section3'));
             boutonEnseignant.className = "zoneManagementUserBoutonChoix";
         }
         return createAdministrateur();
     } else {
         var baseArticle = document.getElementById("base")
-        baseArticle.removeChild(document.getElementById('divFormAdministrateur'));
+        baseArticle.removeChild(document.querySelector('.Section3'));
         boutonAdministrateur.className = "zoneManagementUserBoutonChoix";
     }
 }
@@ -372,28 +388,36 @@ function createAdministrateur() {
     var boutonAdministrateur = document.getElementById("administrateur");
     boutonAdministrateur.className = "zoneManagementUserBoutonChoix couleurBtn";
 
-    var article1 = document.getElementById("base");
+    var base = document.getElementById("base");
+
+    var section3 = document.createElement('section');
+    section3.className = "Section3";
+    base.appendChild(section3);
 
     var divForm = document.createElement('div');
     divForm.id = "divFormAdministrateur";
     divForm.className = "divFormCreate";
-    article1.appendChild(divForm);
+    section3.appendChild(divForm);
 
     var formNewUser = document.createElement('form');
     formNewUser.className = "formCreate";
     divForm.appendChild(formNewUser);
 
+    var divInfo = document.createElement('div');
+    divInfo.className = "divInfo"
+    formNewUser.appendChild(divInfo);
+
     var titre1 = document.createElement('h3');
     var textTitre1 = document.createTextNode("Information générale :")
     titre1.appendChild(textTitre1);
-    formNewUser.appendChild(titre1);
+    divInfo.appendChild(titre1);
 
     var divInput1 = document.createElement('div');
-    divInput1.className = "divFormContenu2";
-    formNewUser.appendChild(divInput1);
+    divInput1.className = "divFormContenu";
+    divInfo.appendChild(divInput1);
 
     var inputNom = document.createElement("input");
-    inputNom.className = "policeForm taille1Form inputMaring";
+    inputNom.className = "policeForm taille1Form";
     inputNom.type = "text";
     inputNom.name = "nomUser";
     inputNom.placeholder = "Nom utilistateur";
@@ -406,9 +430,16 @@ function createAdministrateur() {
     inputPrenom.placeholder = "Prenom utilistateur";
     divInput1.appendChild(inputPrenom);
 
+    var inputEmail = document.createElement("input");
+    inputEmail.className = "policeForm taille2Form";
+    inputEmail.type = "email";
+    inputEmail.name = "emailUser";
+    inputEmail.placeholder = "Email de contact";
+    divInput1.appendChild(inputEmail);
+
     var divInput2 = document.createElement('div');
     divInput2.className = "divFormContenu2";
-    formNewUser.appendChild(divInput2);
+    divInfo.appendChild(divInput2);
 
     var inputTel = document.createElement("input");
     inputTel.className = "policeForm taille1Form inputMaring";
@@ -417,16 +448,8 @@ function createAdministrateur() {
     inputTel.placeholder = "Telephone de contact";
     divInput2.appendChild(inputTel);
 
-
-    var inputEmail = document.createElement("input");
-    inputEmail.className = "policeForm taille2Form";
-    inputEmail.type = "email";
-    inputEmail.name = "emailUser";
-    inputEmail.placeholder = "Email de contact";
-    divInput2.appendChild(inputEmail);
-
     var titre2 = document.createElement('h3');
-    var textTitre2 = document.createTextNode("Information de connexion :")
+    var textTitre2 = document.createTextNode("Connexion à l'application :")
     titre2.appendChild(textTitre2);
     formNewUser.appendChild(titre2);
 

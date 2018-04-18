@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/style_Login.css">
-    </head>
-    <body>
-        <div class="mainIndex">
-            <section>
-                <div id="logo">
-                    <img src="img/colibris.png">
-                    <p>Facilité l'échange de séries entre collèges des pyrénées atlantique</p>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style_Login.css">
+</head>
+
+<body>
+    <div class="mainIndex">
+        <section>
+            <div class="Section2Index">
+                <div class="zoneManagementUserChoixType">
+                    <a href="user/admin/accueil.html" class="zoneManagementUserBoutonChoix" id="administrateur">Administrateur</a>
+                    <a href="user/documentaliste/accueil.html" class="zoneManagementUserBoutonChoix" id="documentaliste">Documentaliste</a>
+                    <a href="#" class="zoneManagementUserBoutonChoix" id="enseignant">Enseignant</a>
                 </div>
-                <form id="login" method="post" action="admin_stats.html">
-                    <h1>Connectez-vous</h1>
-                    <div id="divInputLogin">
-                        <input class="policeForm inputLogin" type="email" placeholder="Identifiant">
-                        <input class="policeForm inputLogin" type="password" placeholder="Mot de passe">
-                    </div>
-                    <div id="lienMdpOublie">
-                        <a href="#">Mot de passe oublié</a>
-                    </div>
-                    <div id="divBoutonLogin">
-                        <button class="btn-modifier colorWhite" type="submit" name="inscription" value="inscription">Inscription</button>
-                        <a class="btn-modifier" href="user/admin/admin_stats.html" name="connexion">Connexion</a>
-                    </div>
-                </form>
-            </section>
-            <footer>                
-            </footer>
-        </div>
-    </body>
+            </div>
+        </section>
+        <footer>
+        </footer>
+    </div>
+</body>
+
 </html>

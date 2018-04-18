@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/css-documentaliste/style_tableauBordSerie.css">
+    <link rel="stylesheet" type="text/css" href="../../css/css-documentaliste/style_requestSeries.css">
+</head>
+
+<body>
+    <header>
+        <div class="main">
+            <a href="../../index.html" id="lienLogo">
+                <img src="../../img/colibris.png">
+            </a>
+            <!-- logo -->
+            <div>
+                <a href="#" title="Chercher une série dans l'application">
+                    <img class='svg2' src="../../img/search.svg">
+                </a>
+                <a href="#" title="Gestion des requètes">
+                    <img class='svg' src="../../img/comments.svg">
+                </a>
+                <a href="docu_addSerie.html" title="Ajouter une série">
+                    <img class='svg' src="../../img/plus-square.svg">
+                </a>
+                <a href="docu_gestionSerie.html" title="Séries proposer par mon collège">
+                    <img class='svg2' src="../../img/book.svg">
+                </a>
+                <a href="parametre.html" title="Paramètres">
+                    <img class='svg2' src="../../img/cog.svg">
+                </a>
+                <a href="accueil.html" title="Déconnexion">
+                    <img class='svg2' src="../../img/sign-out-alt.svg">
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <section class="Section1">
+            <div class="divTitre1">
+                <h1>Tableau de bord</h1>
+                <p>Vous pouvez choisir l'interface dans lesquel vous souhaitez intervenir ou obtenir des informations.</p>
+            </div>
+        </section>
+        <section class="Section2">
+            <div class="zoneManagementUserChoixType">
+                <a href="#" class="zoneManagementUserBoutonChoix couleurBtn" id="">Demande en attente (3)</a>
+                <a href="#" class="zoneManagementUserBoutonChoix" id="">Prèt en cours (0)</a>
+                <a href="#" class="zoneManagementUserBoutonChoix" id="">Emprunt en cours (0)</a>
+                <a href="#" class="zoneManagementUserBoutonChoix" id="">Historique</a>
+            </div>
+        </section>
+        <section class="Section3Docu">
+            <div class="divResultatSerie">
+                <article class="articleSerie2" id="articleSerie2">
+                    <div class="infoSerie">
+                        <img class="imgSerie" src="../../img/imgSerie1.jpg">
+                        <div class="divDescriptionSerie">
+                            <div class="divDescriptDetail">
+                                <div class="divTitreSerie">
+                                    <h3>Les fourberie de scapin </h3>
+                                </div>
+                                <div class="divAuteur">
+                                    <h4>Auteur : Molière </h4>
+                                </div>
+                                <div class="divAuteur">
+                                    <h4>Collection : Bibliocollège </h4>
+                                </div>
+                                <div>
+                                    <h4>Editeur : Hachette </h4>
+                                </div>
+                            </div>
+                            <div class="divDescriptDetail">
+                                <div class="divCollege">
+                                    <p>Collège : Jeanne d'Albret - Pau</p>
+                                </div>
+                                <div class="divAuteur">
+                                    <p>Enseignant : Zola Emilien</p>
+                                </div>
+                                <div>
+                                    <p>Reçus le 15/04/2018</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divDispo">
+                            <img class="sablier imgDispo" src="../../img/hourglass.svg">
+                            <p>Attente de traitement</p>
+                        </div>
+                        <div class="divImgFleche">
+                            <img class="angle-down2" id='fleche2' src="../../img/angle-down.svg">
+                        </div>
+                    </div>
+                    <div class="deplierSerie hidden2" id="deplierSerie2">
+                        <div class="infoSerieDetail">
+                            <p>Nombre d'exemplaire : 29 livres</p>
+                            <p>Langue : Français</p>
+                            <p>Code barre : 932490237289</p>
+                            <p>Code BCDI : 435942</p>
+                            <p>ISBN : 456392040</p>
+                            <p>ISNN : 932-30730769</p>
+                        </div>
+                        <form class="formContact">
+                            <div class="dateEmprunt">
+                                <div class="dateEmpruntDetail">
+                                    <label>Date d'emprunt :</label>
+                                    <p>20/02/2018</p>
+                                </div>
+                                <div class="dateEmpruntDetail">
+                                    <label>Date de retour :</label>
+                                    <p>17/04/2018</p>
+                                </div>
+                            </div>
+                            <div class="comEtBtn">
+                                <div class="divMessageRecu">
+                                    <p>
+                                        <strong>Message reçus :</strong>
+                                    </p>
+                                    <div class="message">
+                                        <p>Faure Marlène </p>
+                                        <p>Monsieur Zola aurait besoin de cette série de février à avril 2018. La série est
+                                            elle toujours disponible? L'enseignant peut passer prendre les livres dans la
+                                            semaine qui vient lundi ou jeudi entre 14h et 15h.
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="commentaire">
+                                    <label>Commentaire à l'attention du collège emprunteur :</label>
+                                    <textarea>Ecriver un commentaire (optionnel)</textarea>
+                                </div>
+                                <div class="btn-request">
+                                    <button class="btn-modifier btn-refus">Refuser la demande</button>
+                                    <button class="btn-modifier">Concentir au prêt</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </article>
+                <article class="articleSerie2" id="articleSerie1">
+                    <div class="infoSerie">
+                        <img class="imgSerie" src="../../img/imgSerie2.jpg">
+                        <div class="divDescriptionSerie">
+                            <div class="divDescriptDetail">
+                                <div class="divTitreSerie">
+                                    <h3>Le médecin malgré lui</h3>
+                                </div>
+                                <div class="divAuteur">
+                                    <h4>Auteur : Molière </h4>
+                                </div>
+                                <div class="divAuteur">
+                                    <h4>Collection : Bibliocollège </h4>
+                                </div>
+                                <div>
+                                    <h4>Editeur : Hachette </h4>
+                                </div>
+                            </div>
+                            <div class="divDescriptDetail">
+                                <div class="divMonCollege">
+                                    <p>Mon collège</p>
+                                </div>
+                                <div class="divAuteur">
+                                    <p>Enseignant : Germain Lucas</p>
+                                </div>
+                                <div>
+                                    <p>Reçus le 15/04/2018</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divDispo">
+                            <img class="sablier imgDispo" src="../../img/hourglass.svg">
+                            <p>Attente de traitement</p>
+                        </div>
+                        <div class="divImgFleche">
+                            <img class="angle-down2" id='fleche' src="../../img/angle-down.svg">
+                        </div>
+                    </div>
+                    <div class="deplierSerie hidden1" id="deplierSerie1">
+                        <div class="infoSerieDetail">
+                            <p>Nombre d'exemplaire : 23 livres</p>
+                            <p>Langue : Français</p>
+                            <p>Code barre : 932490237289</p>
+                            <p>Code BCDI : 435942</p>
+                            <p>ISBN : 456392040</p>
+                            <p>ISNN : 932-30730769</p>
+                        </div>
+                        <form class="formContact">
+                            <div class="dateEmprunt">
+                                <div class="dateEmpruntDetail">
+                                    <label>Date d'emprunt :</label>
+                                    <input placeholder="20/02/2018">
+                                </div>
+                                <div class="dateEmpruntDetail">
+                                    <label>Date de retour :</label>
+                                    <input placeholder="25/06/2018">
+                                </div>
+                            </div>
+                            <div class="comEtBtn">
+                                <div class="commentaire">
+                                    <label>Commentaire à l'attention du collège prêteur :</label>
+                                    <textarea>Ecriver un commentaire (optionnel)</textarea>
+                                </div>
+                                <div class="btn-request">
+                                    <button class="btn-modifier btn-refus">Refuser la demande</button>
+                                    <button class="btn-modifier">Envoyer la requète</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </article>
+                <article class="articleSerie">
+                    <img class="imgSerie" src="../../img/imgSerie4.jpg">
+                    <div class="divDescriptionSerie">
+                        <div class="divDescriptDetail">
+                            <div class="divTitreSerie">
+                                <h3>Le Malade imaginaire</h3>
+                            </div>
+                            <div class="divAuteur">
+                                <h4>Auteur : Molière </h4>
+                            </div>
+                            <div class="divAuteur">
+                                <h4>Collection : Bibliocollège </h4>
+                            </div>
+                            <div>
+                                <h4>Editeur : Hachette </h4>
+                            </div>
+                        </div>
+                        <div class="divDescriptDetail">
+                            <div class="divCollege">
+                                <p>Collège : Simin Palay - Lescar</p>
+                            </div>
+                            <div class="divAuteur">
+                                <p>Enseignant : Dupont Pierre</p>
+                            </div>
+                            <div>
+                                <p>Reçus le 13/04/2018</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divDispo">
+                        <img class="sablier imgDispo" src="../../img/hourglass.svg">
+                        <p>Attente de traitement</p>
+                    </div>
+                    <div class="divImgFleche">
+                        <img class="angle-down2" src="../../img/angle-down.svg">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </div>
+    <script>
+
+        var actionBtn = document.querySelector('#articleSerie1');
+        var actionBtn2 = document.querySelector('#articleSerie2');
+        actionBtn.addEventListener('click', deplier)
+        actionBtn2.addEventListener('click', deplier2
+        )
+        var depliant = document.querySelector('#deplierSerie1');
+        depliant.addEventListener('click', stopEvent);        
+        var depliant2 = document.querySelector('#deplierSerie2');
+        depliant2.addEventListener('click', stopEvent);
+
+        var fleche = document.querySelector('#fleche');
+        var fleche2 = document.querySelector('#fleche2');
+
+        function deplier() {
+
+            if (document.querySelector('.hidden1')) {
+                depliant.className = "deplierSerie";
+                fleche.src = "../../img/angle-up.svg";
+            } else {
+                depliant.className = "deplierSerie hidden1";
+                fleche.src = '../../img/angle-down.svg';
+            }
+        }
+
+        function deplier2() {
+
+            if (document.querySelector('.hidden2')) {
+                depliant2.className = "deplierSerie";
+                fleche2.src = "../../img/angle-up.svg";
+            } else {
+                depliant2.className = "deplierSerie hidden2";
+                fleche2.src = '../../img/angle-down.svg';
+            }
+        }
+
+        function stopEvent(evt) {
+            evt.stopPropagation();
+        }
+
+    </script>
+</body>
+
+</html>
