@@ -1,0 +1,24 @@
+bienvenue sur le projet
+
+créer vous un arborescence pour que chaque membre du groupe 
+dépose son travail dans sa branche sans qu'il écrase le travail
+de ses collaborateur.
+
+exemple : 
+
+branch Groupe-1
+
+    baudy_jerome/ (dossier)
+        js/  (dossier)
+            class_serie.js (fichier)
+            serie.JSON (fichier)
+
+    guy_sebastien/  (dossier)
+        css/  (dossier)
+            style_serie.css (fichier)
+
+    ba_alexandre/  (dossier)
+        page_accueil/  (dossier)
+            index.html (fichier)
+
+            
