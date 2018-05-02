@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/css-documentaliste/style_addSeries.css">
+    <link rel="stylesheet" type="text/css" href="../../css/css-documentaliste/style_tableauBordSerie.css">
+</head>
+
+<body>
+    <header>
+        <div class="main">
+            <a href="../../index.html" id="lienLogo">
+                <img src="../../img/colibris.png">
+            </a>
+            <!-- logo -->
+            <div>
+                <a href="#" title="Chercher une série dans l'application">
+                    <img class='svg2' src="../../img/search.svg">
+                </a>
+                <a href="docu_requeteSerie.html" title="Gestion des requètes">
+                    <img class='svg' src="../../img/comments.svg">
+                </a>
+                <a href="docu_addSerie.html" title="Ajouter une série">
+                    <img class='svg' src="../../img/plus-square.svg">
+                </a>
+                <a href="docu_gestionSerie.html" title="Séries proposer par mon collège">
+                    <img class='svg2' src="../../img/book.svg">
+                </a>
+                <a href="parametre.html" title="Paramètres">
+                    <img class='svg2' src="../../img/cog.svg">
+                </a>
+                <a href="accueil.html" title="Déconnexion">
+                    <img class='svg2' src="../../img/sign-out-alt.svg">
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <section class="Section1">
+            <div class="divTitre1">
+                <h1>Création d'une série</h1>
+                <p>Dans cet espace vous pouvez créer les séries que vous proposer au prêt sur l'application.</p>
+            </div>
+        </section>
+        <section class="Section2 center">
+            <form id="formSerie">
+                <div class="divFormSerie">
+                    <input class="policeForm inputFormSerie inputTaille2" type="text" name="titreSerie" placeholder="Titre">
+                </div>                
+                <div class="divFormSerie">
+                    <input class="policeForm inputFormSerie inputTaille" type="text" name="auteurSerie" placeholder="Auteur">
+                    <input class="policeForm inputFormSerie inputTaille" type="text" name="langueSerie" placeholder="Langue">
+                </div>
+                <div class="divFormSerie">
+                    <input class="policeForm inputFormSerie inputTaille" type="text" name="editionSerie" placeholder="Edition">
+                    <input class="policeForm inputFormSerie inputTaille" type="text" name="collectionSerie" placeholder="Collection">
+                </div>
+                <div class="divFormSerie">
+                    <input class="policeForm inputFormSerie inputTaille" type="text" name="codeBarreSerie" placeholder="Code barre">
+                    <input class="policeForm inputFormSerie inputTaille" type="text" name="codeBCDISerie" placeholder="Code BCDI">
+                </div>
+                <div class="divFormSerie">
+                    <input class="policeForm inputFormSerie inputTaille" type="text" name="codeISBN" placeholder="Code ISBN">
+                    <input class="policeForm inputFormSerie inputTaille" type="text" name="codeISNN" placeholder="Code ISNN">
+                </div>
+                <div class="divFormSerie">
+                    <div class="divFormSerie2">
+                        <label for="exemplaire">Nombre d'exemplaire :</label>
+                        <input id="exemplaire" class="policeForm inputFormSerie inputTaille" type="text" name="nombreExemplaire" placeholder="exemple: 15">
+                    </div>
+                    <div class="divFormSerie3">
+                        <label for="nbPage">Nombre de page par livre :</label>
+                        <input id="nbPage" class="policeForm inputFormSerie inputTaille" type="text" name="nombrePage" placeholder="exemple: 165">
+                    </div>
+                </div>
+                <div class="divFormBtn">
+                    <button class="btn-modifier" type="submit" name="enregistrer">Enregistrer</button>
+                </div>
+
+            </form>
+        </section>
+        <section>
+        </section>
+        <footer>
+            <!-- Bouton retour haut de page? -->
+        </footer>
+    </div>
+</body>
+
+</html>

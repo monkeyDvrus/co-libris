@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Roboto:500,700');
+
+/*
+
+SOMMAIRE :
+
+-
+-
+-
+
+pour lister les choses a changer, rechercher : to change
+
+*/
+
+
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #F0F0F0;
+    font-family: 'Noto Sans', Arial, sans-serif;
+    font-size: 16px;
+    color: #3B3B3B;
+}
+
+/* Elements principaux */
+
+/* Header */
+header {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    /* to change */
+    background-color: #478EBF;
+}
+
+.logo {
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+}
+
+/* to change */
+/* gestion icon des menu */
+.navIcon {
+    margin-right: 50px;
+    display: flex;
+}
+
+.navIcon a {
+    color: #FFFFFF;
+    align-items: center;
+}
+
+.main {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    background-color: #FFFFFF;
+    padding: 45px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.15);
+    box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.15);
+}
+
+
+/* to change */
+/* gerer avec section firstchild of body */
+body section:first-of-type {
+    margin-top: 125px;
+}
+
+.section2 {
+    margin-bottom: 30px;
+    padding: 45px 45px 15px 45px;
+}
+
+article {
+
+}
+
+/* Formulaire */
+form {
+
+}
+
+input {
+
+}
+
+textarea {
+
+}
+
+label {
+
+}
+
+select {
+
+}
+
+/* Titre */
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    padding: 5px 25px 5px 25px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+h4 {
+    
+}
+
+/* Boutton */
+button {
+
+}
+
+.buttonColorGrey {
+    
+}
+
+.buttonColorBlue {
+    
+}
+
+.buttonColorValide {
+    
+}
+
+.buttonColorAnnule {
+    
+}
+
+a {
+    text-decoration: none;
+}
+/* Elements Generiques */
+
+.flex {
+    display: -webkit-flex;
+    display: flex;
+}
+
+/* @media */

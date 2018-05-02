@@ -1,0 +1,30 @@
+
+/* Reset */
+
+Body
+    - police
+
+General : Structure
+    - flex
+    - width 100%
+    - bold
+    - underline
+Wrap
+
+Section : parti
+
+Article
+
+Formulaire
+
+Select
+
+Text Area
+
+Input
+
+Titre
+
+Boutton
+    - form
+    - couleur
