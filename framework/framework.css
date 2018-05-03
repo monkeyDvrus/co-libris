@@ -31,6 +31,7 @@ body {
 /* Header */
 header {
     height: 70px;
+    width: 100%;
     position: fixed;
     top: 0;
     display: flex;
@@ -140,7 +141,8 @@ h3 {
 }
 
 h4 {
-    
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
 }
 
 /* Lien */
@@ -252,3 +254,22 @@ button {
 }
 
 /* @media */
+/* Large desktop */
+@media (min-width: 1200px) {
+    /* ... */
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 979px) {
+    /* ... */
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    /* ... */
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    /* ... */
+}
